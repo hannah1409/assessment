@@ -1,0 +1,68 @@
+CONTENTS OF THIS FILE
+---------------------
+	* Installation instructions
+	* Why Drupal 8 was chosen
+	* Strategic and architectural decisions
+	* How to test Functional Requirements
+
+---------------------------
+
+INSTALLATION INSTRUCTIONS:
+
+1. Clone a repository
+git clone https://github.com/hannah1409/assessment
+
+2.Change directory to "assessment"
+cd assessment
+
+3. Install dependencies with composer
+composer install
+
+4.Download database dump file https://drive.google.com/file/d/14MyY2C7SbIkl-qgo41C6TYV94w_R1skN/view?usp=sharing
+
+5.Import and set up database
+
+6. Run the installer and enter the database name, username, and password for the imported database.
+
+Now you can log in as Admin
+		Username: assessmentadmin
+		Password: aWrt34$gTTrRui*776Hgff
+
+7. Download files archive from https://drive.google.com/file/d/1YZI0CXOJ3hKJIhlrLCSFCImoqSQ_bQ7W/view?usp=sharing, unzip and place the folder into the following directory sites/default/files
+-----------------------------
+
+WHY DRUPAL 8 WAS CHOSEN
+
+Assessment site is made in Drupal 8.5.3. Drupal 8 was chosen because it has object oriented approach, core multilingual modules, improved website loading speed, allows fast theming,  mobile friendly, and supposedly has longer life cycle than Drupal 7.
+
+------------------------------
+
+STRATEGIC AND ARCHITECTURAL DECISIONS
+
+Front page consists of Courses View with Topic Area, Difficulty Level, and Price Range filters exposed to visitors. This is achieved using Views and Better Exposed Filters modules.
+
+Multilingual functionality is made with core modules. Admin interface will remain in English, because Translation source is set to Local files only.
+
+Wishlist functionality is built using Flag module. Wishlist tab is located in My account. The "People" View, allows authenticated users to see Wishlists from other users. 
+
+Content type "Course" consists of the following field types: text, number (decimal), file, entity reference, link, image, video embed.
+
+Content creator can choose focal point of an image. This was achieved with the help of Focal point module.
+
+In the bottom of each Course page there are links to Add this course to wishlist and Take this course. 
+
+Link to MOOC system Sign up can be added by edditing "Take this course" block. 
+
+The website can be themed using Twig.
+
+---------------------------------
+
+HOW TO TEST FUNCTIONAL REQUIREMENTS
+
+1. The user can view the courses site in 3 languages by changing language in Language switcher or changing language prefix in URL.
+
+2. Focal point of a course image can be moved in Course Edit page.
+
+3. Wishlist functionality can be tested by adding and removing courses to wishlist and viewing other users wishlists in People menu item.
+
+The site can be also tested at http://anna.cyclity.com/
